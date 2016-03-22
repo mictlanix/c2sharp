@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "examples\Examples.csproj", "{95C1DA8C-8D7B-4AFF-A010-03C4B484A840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mictlanix.C2Sharp", "src\Mictlanix.C2Sharp\Mictlanix.C2Sharp.csproj", "{BAE3E5E3-68E0-4B77-9730-DD0950F8C2C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95C1DA8C-8D7B-4AFF-A010-03C4B484A840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C1DA8C-8D7B-4AFF-A010-03C4B484A840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C1DA8C-8D7B-4AFF-A010-03C4B484A840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C1DA8C-8D7B-4AFF-A010-03C4B484A840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE3E5E3-68E0-4B77-9730-DD0950F8C2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE3E5E3-68E0-4B77-9730-DD0950F8C2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE3E5E3-68E0-4B77-9730-DD0950F8C2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE3E5E3-68E0-4B77-9730-DD0950F8C2C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Mictlanix.C2Sharp</id>
+    <version>0.1.0</version>
+    <title>Mictlanix C2Sharp</title>
+    <authors>Eddy Zavaleta, Mictlanix, and contributors</authors>
+    <owners/>
+    <licenseUrl>https://github.com/mictlanix/c2sharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mictlanix/c2sharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.NET wrapper for the Collective2 API v3.</description>
+    <releaseNotes>First public release.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Collective2 trading stocks web services api client library .net</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.3" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="src/Mictlanix.C2Sharp/bin/Release/Mictlanix.C2Sharp.dll" target="lib\net45" />
+  </files>
+</package>
