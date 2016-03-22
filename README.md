@@ -92,3 +92,9 @@ Here is the progress so far (according to [the Collective2 API Documentation](ht
 - [Private-Branded Platform API](https://www.collective2.com/api-docs/latest#toc--private-branded-platform-api-): **0%** (0 of 10)
 
 **Overall**: **25%** (9 of 36)
+
+### Thanks
+
+The C2Sharp project is generously sponsored by one great company:
+
+* [GAANNA](https://www.gaanna.com/) who support this project and enable us to pay for important development work.
