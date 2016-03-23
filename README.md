@@ -28,7 +28,7 @@ client.Dispose ();
 
 ### Examples
 
-##### Getting the system roster:
+##### Getting the system roster.
 
 ```CSharp
 using System;
@@ -59,7 +59,7 @@ public class Example {
 }
 ```
 
-##### Getting system details:
+##### Getting system details.
 
 ```CSharp
 static async Task RunSystemDetailsAsync ()
@@ -71,13 +71,117 @@ static async Task RunSystemDetailsAsync ()
 }
 ```
 
-##### List all strategies with real-time access:
+##### List all strategies with real-time access.
 
 ```CSharp
 static async Task RunListAllSystemsAsync ()
 {
 	using (var client = new Collective2Client ("your-api-key-here")) {
 		var content = await client.ListAllSystemsAsync ();
+		PrintJson (content);
+	}
+}
+```
+
+##### Retrieving open and closed position information about a system.
+
+```CSharp
+static async Task RunRequestTradesAsync ()
+{
+	using (var client = new Collective2Client ("your-api-key-here")) {
+		var content = await client.RequestTradesAsync (<system id>);
+		PrintJson (content);
+	}
+}
+```
+
+##### Request only open positions.
+
+```CSharp
+static async Task RunRequestTradesOpenAsync ()
+{
+	using (var client = new Collective2Client ("your-api-key-here")) {
+		var content = await client.RequestTradesOpenAsync (<system id>);
+		PrintJson (content);
+	}
+}
+```
+
+##### List all working signals (i.e. signals that have not yet traded, been canceled, or expired) within a system.
+
+```CSharp
+static async Task RunRetrieveSignalsWorkingAsync ()
+{
+	using (var client = new Collective2Client ("your-api-key-here")) {
+		var content = await client.RetrieveSignalsWorkingAsync (<system id>);
+		PrintJson (content);
+	}
+}
+```
+
+##### List all signals (with filtering) within a system.
+
+```CSharp
+static async Task RunRetrieveSignalsAllAsync ()
+{
+	using (var client = CreateClient ()) {
+		var content = await client.RetrieveSignalsAllAsync (<system id>, C2TimeFilterType.Posted,
+		                                                    DateTime.Parse ("2016-01-01 08:00:00"),
+		                                                    DateTime.Parse ("2016-12-31 16:00:00"));
+		PrintJson (content);
+	}
+}
+```
+
+##### Submitting a basic order (C2 Signal).
+_Sell To Close 10 contracts of Direxion Daily Small Cap Bear 3X ETF (TZA) stocks, at 48.5 limit. The order is a GTC order._
+
+```CSharp
+static async Task RunSubmitSignalAsync ()
+{
+	using (var client = CreateClient ()) {
+		var content = await client.SubmitSignalAsync (<system id>, C2Duration.GoodTilCanceled,
+							C2Action.SellToClose, 10, "TZA", C2SymbolType.Stock, 48.5m);
+		PrintJson (content);
+	}
+}
+```
+
+##### Submitting a bracket order (Entry + Stop Loss + Profit Target).
+_Buy To Open 200 contracts of Direxion Daily Small Cap Bull 3X ETF (TNA) stocks, at 55.00 limit with a profit target of 55.30 and an stop loss of 53.00. The order is a DAY order._
+
+```CSharp
+static async Task RunBracketOrderAsync ()
+{
+	using (var client = CreateClient ()) {
+		var content = await client.SubmitBracketOrderAsync (<system id>, C2Duration.Day, C2Action.BuyToOpen, 200,
+								"TNA", C2SymbolType.Stock, 55.00m, 55.3m, 53m);
+		PrintJson (content);
+	}
+}
+```
+
+##### Cancel an order.
+
+```CSharp
+static async Task RunCancelSignalAsync ()
+{
+	using (var client = CreateClient ()) {
+		var content = await client.CancelSignalAsync (<system id>, <signal id>);
+		PrintJson (content);
+	}
+}
+```
+
+##### Cancel and replace (xreplace) an order.
+_Replace existing order with Sell To Close 100 contracts of Direxion Daily Small Cap Bear 3X ETF (TZA) stocks as market order._
+
+```CSharp
+static async Task RunReplaceSignalAsync ()
+{
+	using (var client = CreateClient ()) {
+		var content = await client.ReplaceSignalAsync (<system id>, <signal id>, C2Duration.GoodTilCanceled,
+							C2Action.SellToClose, 100, "TZA", C2SymbolType.Stock, 0);
 		PrintJson (content);
 	}
 }
