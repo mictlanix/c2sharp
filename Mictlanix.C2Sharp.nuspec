@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Mictlanix.C2Sharp</id>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <title>Mictlanix C2Sharp</title>
     <authors>Eddy Zavaleta, Mictlanix, and contributors</authors>
     <owners/>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/mictlanix/c2sharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET wrapper for the Collective2 API v3.</description>
-    <releaseNotes>First public release.</releaseNotes>
+    <releaseNotes>Bug fix release.</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Collective2 trading stocks web services api client library .net</tags>
     <dependencies>
