@@ -391,7 +391,7 @@ namespace Mictlanix.C2Sharp {
 
 		static string ConvertToNewYorkTime (DateTime dt)
 		{
-			return TimeZoneInfo.ConvertTimeBySystemTimeZoneId (dt, "America/New_York").ToString ("yyyy-MM-dd HH:mm:ss");
+			return TimeZoneInfo.ConvertTimeBySystemTimeZoneId (dt, "Eastern Standard Time").ToString ("yyyy-MM-dd HH:mm:ss");
 		}
 	}
 }
