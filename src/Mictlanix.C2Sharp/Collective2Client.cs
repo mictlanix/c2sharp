@@ -65,7 +65,8 @@ namespace Mictlanix.C2Sharp {
 			client.Dispose ();
 		}
 
-		/* Strategy Access API
+		/* 
+		 * Strategy Access API
 		 * 
 		 * Done:
 		 * getSystemRoster
@@ -80,9 +81,6 @@ namespace Mictlanix.C2Sharp {
 		 * requestAllTrades_overview
 		 * subscribeToStrategy
 		 * retrieveSystemEquity
-		 * 
-		 * getDesiredPositions
-		 * setDesiredPositions
 		 * 
 		 */
 
@@ -391,6 +389,12 @@ namespace Mictlanix.C2Sharp {
 
 		static string ConvertToNewYorkTime (DateTime dt)
 		{
+			PlatformID pid = Environment.OSVersion.Platform;
+
+			if (pid == PlatformID.Unix || pid == PlatformID.MacOSX) {
+				return TimeZoneInfo.ConvertTimeBySystemTimeZoneId (dt, "America/New_York").ToString ("yyyy-MM-dd HH:mm:ss");
+			}
+
 			return TimeZoneInfo.ConvertTimeBySystemTimeZoneId (dt, "Eastern Standard Time").ToString ("yyyy-MM-dd HH:mm:ss");
 		}
 	}
