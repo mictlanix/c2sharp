@@ -52,10 +52,10 @@ namespace Mictlanix.C2Sharp {
 		public decimal Limit { get; set; }
 
 		[JsonProperty ("profittarget")]
-		public decimal ProfitTarget { get; set; }
+		public decimal? ProfitTarget { get; set; }
 
 		[JsonProperty ("stoploss")]
-		public decimal StopLoss { get; set; }
+		public decimal? StopLoss { get; set; }
 
 		[JsonProperty ("market")]
 		[JsonConverter (typeof (BoolConverter))]
