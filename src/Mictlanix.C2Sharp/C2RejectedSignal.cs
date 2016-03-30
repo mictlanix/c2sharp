@@ -49,7 +49,7 @@ namespace Mictlanix.C2Sharp {
 		public C2SymbolType TypeOfSymbol { get; set; }
 
 		[JsonProperty ("limit")]
-		public decimal Limit { get; set; }
+		public decimal? Limit { get; set; }
 
 		[JsonProperty ("profittarget")]
 		public decimal? ProfitTarget { get; set; }
