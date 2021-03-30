@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.1.5</PackageVersion>
+    <PackageVersion>0.1.6</PackageVersion>
     <Authors>Eddy Zavaleta, Mictlanix, and contributors</Authors>
     <Copyright>Copyright 2016-2021</Copyright>
     <PackageLicenseUrl>https://github.com/mictlanix/c2sharp/blob/master/LICENSE</PackageLicenseUrl>
@@ -10,13 +10,14 @@
     <PackageTags>Collective2 trading stocks web services api client library .net</PackageTags>
     <Title>Mictlanix C2Sharp</Title>
     <Description>.NET wrapper for the Collective2 API v3.</Description>
+    <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType></DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
   </ItemGroup>
 </Project>

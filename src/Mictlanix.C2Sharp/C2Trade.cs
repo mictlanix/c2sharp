@@ -39,7 +39,7 @@ namespace Mictlanix.C2Sharp {
 		public string SymbolDescription { get; set; }
 
 		[JsonProperty ("closeVWAP_timestamp")]
-		public long CloseVWAPTimestamp { get; set; }
+		public long? CloseVWAPTimestamp { get; set; }
 
 		[JsonProperty ("strike")]
 		public string Strike { get; set; }
@@ -57,7 +57,7 @@ namespace Mictlanix.C2Sharp {
 		public string Underlying { get; set; }
 
 		[JsonProperty ("closing_price_VWAP")]
-		public decimal ClosingPriceVWAP { get; set; }
+		public decimal? ClosingPriceVWAP { get; set; }
 
 		[JsonProperty ("putcall")]
 		public string Putcall { get; set; }
@@ -84,10 +84,10 @@ namespace Mictlanix.C2Sharp {
 		public string PL { get; set; }
 
 		[JsonProperty ("closedWhen")]
-		public DateTime ClosedWhen { get; set; }
+		public DateTime? ClosedWhen { get; set; }
 
 		[JsonProperty ("closedWhenUnixTimeStamp")]
-		public long ClosedWhenTimestamp { get; set; }
+		public long? ClosedWhenTimestamp { get; set; }
 
 		[JsonProperty ("openedWhen")]
 		public DateTime OpenedWhen { get; set; }
